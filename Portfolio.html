@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.CSS">
+</head>
+<body >
+<!--------Home-------->    
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#"><img src="LOGO.png" alt="logo" class="logo"></a>
+                <ul>
+                    <li><a href="#" >Home</a></li>
+                    <li><a href="#about" >About</a></li>
+                    <!--<li><a href="#" >Services</a></li>-->
+                    <li><a href="#Portfolio" >Portfolio</a></li>
+                    <li><a href="#" >Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>
+                    Software Dev/Designer
+                </p>
+                <h1>
+                    Hi, I'm Muhammad <br><span>Shuhaibh</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+<!-----about----->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="user.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p class="writing">
+                    <br>A Passionate Tech Enthusiast.<br>
+                    Currently pursuing Computer Science degree at RIT.<br>
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li>
+                            <span>Blender</span><br>3D Graphics
+                        </li>
+                        <li>
+                            <span>Photoshop</span><br>Designing
+                        </li>
+                        <li>
+                            <span>Web Designer</span><br>Designing of Webpages
+                        </li>
+                        <li>
+                            <span>Programming</span><br>Java , C , Python
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li>
+                            <span>Nil</span><br>
+                        </li>
+                        <li>
+                            <span></span><br>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li>
+                            <span>2022-current</span><br>B-tech from Rajiv Gandhi Institute of technology
+                        </li>
+                        <li>
+                            <span>2022</span><br>Higher Secondary from Alps International Science Academy
+                        </li>
+                        <li>
+                            <span>2020</span><br>10th from Al-Farook Res.Se.Sec.School
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<!---->
+<div id="Portfolio">
+    <div class="container">
+        <div class="portitle">
+        <h1 class="change-text">ART</h1>
+        </div>
+        <div id="portitle2">
+        <h1 style="font-size: 40px;">Portfolio</h1>
+        </div>
+    </div>
+    <div id="portable">
+            <div class="grid">
+                <img src="C:\Users\shuha\Downloads\Blender\Renders\untitled3.png" alt="">
+                <img src="C:\Users\shuha\Downloads\Snapinsta.app_103605236_566373960732781_3181358143543782926_n_1080.jpg" alt="">                    <img src="C:\Users\shuha\Downloads\Snapinsta.app_273013180_5107761962601612_7496895183292948726_n_1080.jpg" alt="">
+                <img src="C:\Users\shuha\Downloads\Snapinsta.app_301980840_3177603525838488_6587104180550549857_n_1080.jpg" alt="">
+            </div>
+            <div class="grid">
+                <img src="C:\Users\shuha\Downloads\Snapinsta.app_278546845_164409852678195_309696478604042028_n_1080.jpg" alt="">
+                <img src="C:\Users\shuha\Downloads\Snapinsta.app_272947118_459678749122979_2218243938739036791_n_1080.jpg" alt="">
+                <img src="C:\Users\shuha\Downloads\Snapinsta.app_302238364_5349756038479128_216642457659803386_n_1080.jpg" alt="">
+                <img src="C:\Users\shuha\Downloads\Snapinsta.app_272770848_434471808410126_5421682511663198794_n_1080.jpg" alt="">
+            </div>
+            <div class="grid">
+                <img src="C:\Users\shuha\Downloads\Snapinsta.app_74892130_173083204238620_1713778569447519734_n_1080.jpg" alt="">
+                <img src="C:\Users\shuha\Downloads\Snapinsta.app_103428458_548511562696355_3978151013167110609_n_1080.jpg" alt="">
+                <img src="C:\Users\shuha\Downloads\Snapinsta.app_106470624_130897815316957_5390369028952771051_n_1080.jpg" alt="">
+                <img src="C:\Users\shuha\Downloads\Snapinsta.app_105379172_307712640608468_303018111176324234_n_1080.jpg" alt="">
+            </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+</body> 
+</html>
