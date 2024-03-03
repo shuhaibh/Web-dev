@@ -170,6 +170,7 @@ nav ul li a:hover::after{
 #Portfolio{
     background-color: rgb(0, 0, 0);
     padding: 20px 20px;
+    overflow: hidden;
    /* border-radius: 20px;
     border-width: 1px;
     border-color: #fff;
@@ -177,17 +178,17 @@ nav ul li a:hover::after{
     min-height: 700px;*/    
 }
 
-/*#Portfolio h1{
-    text-align: center;
-    font-size: 40px;
-}*/
-
+#Portfolio span{
+    align-items: center;
+    justify-content: center;
+}
 .change-text {
+    background-color: #0541d8;
     font-size: 30px;
     text-align: center;
-    color: #ffffff;
+    color: #ffffff;;
     animation-name: fontChange;
-    animation-duration: 2s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
   }
   
@@ -205,7 +206,7 @@ nav ul li a:hover::after{
       font-family: Verdana ;
     }
     80% {
-      font-family: fantasy;
+      font-family: 'Brush Script MT', cursive;
     }
     100% {
       font-family: serif;
@@ -213,50 +214,63 @@ nav ul li a:hover::after{
   }
 
 
-/*#portable td {
-    content: "";
-    padding: 0px 7px;
-    border-radius: 10px;
-}*/
-
-#portable td{
-    padding: 5px 7px;
-}
-
-#portable td img {
-    display: block;
-    height: 350px;
-    width: 350px;
-    border-radius: 10px;
-    transition-property: height,width;
-    transition-duration: .5s;
-}
-
-/*#portable img::after{
-    content: "";
-    height: 350px;
-    width: 350px;
-    border-radius: 10px;
-    box-shadow: 0 0 0px 0px #ffffff;      
-}*/
-
-/*#portable img:hover{
-    height: 400px;
-    width: 400px;      
-}*/
-
-#portable table{
-    padding: 0px 5px;
-    justify-content: center;
-    align-items: center;
-}
-
 .portitle{
     background-color: rgb(0, 0, 0);
     height: 40px;
 }
 
-#portitle2{
+.portitle2{
     text-align: center;
     justify-content: center;
+}
+
+.gridlist{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
+    grid-gap: 20px;
+    margin-top: 10px;
+}
+.grid{
+    background-color:black;
+    border-radius: 10px;
+    position: relative;
+    overflow:hidden;
+}
+.grid img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transform: scale(1.1);
+    transition: transform 0.5s ;
+}
+
+.layer{
+    position:relative;
+    top: -36px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: baseline;
+}
+
+.layer p {
+    background-color: rgba(0, 0, 0, 0);
+    color:rgba(0,0,0,0);
+    border-radius: 10px;
+    padding:10px;
+    margin:1;
+    font-size: large;
+    text-align: center;
+    font-family:'Luminari';
+    transition: color .5s;
+}
+
+.grid:hover img {
+    transform: scale(0.86);
+}
+
+.grid:hover .layer p{
+    color: #fff;
 }
