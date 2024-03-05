@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Kaushan+Script&family=Lobster&family=Major+Mono+Display&family=Ranchers&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -183,10 +185,10 @@ nav ul li a:hover::after{
     justify-content: center;
 }
 .change-text {
-    background-color: #0541d8;
-    font-size: 30px;
+    background-color: #00000000;
+    font-size: 40px;
     text-align: center;
-    color: #ffffff;;
+    color: #0541d8;
     animation-name: fontChange;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -194,23 +196,23 @@ nav ul li a:hover::after{
   
   @keyframes fontChange {
     0% {
-      font-family: 'Courier New';
-    }
-    20% {
-      font-family: Franklin Gothic Medium;
-    }
-    40% {
-      font-family: 'Lucida Sans';
-    }
-    60% {
-      font-family: Verdana ;
-    }
-    80% {
-      font-family: 'Brush Script MT', cursive;
-    }
-    100% {
-      font-family: serif;
-    }
+        font-family: 'Major Mono Display', monospace;
+      }
+      20% {
+        font-family: 'Kaushan Script', cursive;
+      }
+      40% {
+        font-family: 'Lobster', cursive;
+      }
+      60% {
+        font-family: 'Ranchers', cursive;
+      }
+      80% {
+        font-family: 'Bitter', serif;
+      }
+      100% {
+        font-family: 'Major Mono Display', monospace;
+      }
   }
 
 
@@ -273,4 +275,50 @@ nav ul li a:hover::after{
 
 .grid:hover .layer p{
     color: #fff;
+}
+
+.link {
+    display: flex;
+    flex-direction: column; /* To stack the elements vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text within the container */
+}
+
+.link p {
+    border-radius: 30px;
+    padding: 5px 40px;
+    color: #fff;
+    margin: 0; /* Remove default margin */
+}
+
+.link a:hover {
+    background-color: #0541d86b;
+    border-color: #ffffff98;
+}
+
+.link a {
+    
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 5px 40px;
+    margin-top: 15px;
+    border: #ffffff00;
+    border-width: 2px;
+    border-style:solid;
+    transition: all .5s;
+}
+
+.link i{
+    scale: 1.5;
+    color: #0541d800;
+    position: relative;
+    left: -30px;
+    transition: color .5s;
+}
+
+.link a:hover i{
+    color: #ffffff98;
 }
