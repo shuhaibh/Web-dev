@@ -1,0 +1,65 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body >
+    <div class="container">
+      <div class="header">
+        <h1 id="title">Classroom Survey Form</h1>
+        <p id="description">Thanks for taking this Survey</p>
+      </div>
+      <form id="survey-form" method="post" action="">
+        <fieldset>
+            <label id="name-label" for="name" name="name">
+              Name 
+              <input type="text" required id="name" placeholder="Enter your name">
+            </label>
+          <label id="email-label" for="email" name="email">
+            Email 
+          <input type="email" required id="email" placeholder="Enter your Email">
+          </label>
+          <label id="number-label" for="number" name="age">Age(optional)<input type="number" placeholder="Enter your age" id="number" min=13 max=120></label>
+        </fieldset>
+        <fieldset>
+          <label for="dropdown">Qualification
+            <select id="dropdown" required>
+            <option value="">(Select value)</option>
+            <option value="1">10th Standard</option>
+            <option value="2">12th Standard</option>
+            <option value="3">Under graduate</option>
+            <option value="4">Post Graduate</option>
+            <option value="5">PHD</option>
+            </select>
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Hosteller/Dayscholar</legend>
+          <label for="dayscholar" ><input type="radio" id="dayscholar" checked class="inline" name="stay-type" value="Dayscholar">Dayscholar</label>
+          <label for="hosteller"><input type="radio" id="hosteller" class="inline" name="stay-type" value="Hosteller">Hosteller</label>
+        </fieldset>
+        <fieldset>
+          <legend>What programming languages are you Familiar with?</legend>
+          <label for="lang" ><input  type="checkbox" id="lang_C" value="0" class="input-checkbox" > C</label>
+          <label for="lang"><input type="checkbox" id="lang_cpp" value="1" class="input-checkbox"> C++</label>
+          <label for="lang"><input type="checkbox" id="lang_py" value="2" class="input-checkbox"> Python</label>
+          <label for="lang"><input type="checkbox" id="lang_JAVA" value="3" class="input-checkbox"> JAVA</label>
+          <label for="lang"><input type="checkbox" id="lang html" value="4" class="input-checkbox"> HTML</label>
+          <label for="lang"> <input type="checkbox" id="lang_R" value="5" class="input-checkbox"> R</label>
+          <label for="lang"><input type="checkbox" id="lang_JS" value="6" class="input-checkbox"> Javascript</label>
+          <label for="lang"><input type="checkbox" id="lang_SQL" value="7" class="input-checkbox"> SQL</label>
+        </fieldset>
+        <fieldset>
+          <label>
+            Write a Paragraph about Your Hobbies:
+            <textarea id="hobbies" name="hobby" rows="10" cols="60" placeholder="My hobbies are..."></textarea>
+          </label>
+        </fieldset>
+    <input type="submit" id="submit" value="Submit"/>
+      </form>
+    </div>
+  </body>
+</html>
