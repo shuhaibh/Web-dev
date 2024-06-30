@@ -12,13 +12,150 @@ HTML{
 
 body {
   font-family: 'Baskervville', serif;
-  color: linen;
-  background-color: #FDFCDC;
+  color:black;
+  background-color: #FFF3E7
+;
 }
 
-#header{
-  float:top;
-  width:100%;
-  height:7rem;
-  background-color:#0081A7;
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
 }
+
+#header-img{
+  width:7rem;
+  position:relative;
+}
+  
+#company-title{
+font-family:'Baskervville', serif;
+  font-size:30px;
+  color:black;
+  position:relative;
+  padding-left:10px;
+}
+
+#nav-bar {
+  margin-left: auto; 
+}
+
+#nav-bar a{
+  text-decoration:none;
+  font-size:30px;
+  padding:13px;
+  color:black;
+  border-radius:5px;
+  transition: background-color 0.3s, color 0.3s;
+
+}
+
+#nav-bar a:hover{
+  background-color:#F07167;
+  color:black;
+}
+
+#hero{
+  margin-top:90px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  justify-content:center;
+  height:200px;
+  font-family:'Brush Script MT';
+  font-size:60px;
+}
+
+#hero p{
+  margin:0 40px 15px 40px;
+  font-family:serif;
+  font-size:30px;
+}
+#email{
+  max-width:375px;
+  width:100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding:7px;
+  font-size: 16px;
+}
+
+#submit{
+    max-width:175px;
+    width:100%;
+    padding:7px;
+    margin-top:10px;
+    background-color:#F07167;
+    font-size: 16px;
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+#submit:hover{
+    background-color:#EF3B2E;
+}
+
+#container{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#Feature-list{
+  list-style-type: none; 
+  padding: 0;
+}
+
+#list-item {
+  display: flex;
+  flex-direction: row;
+  font-size: 25px;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+#Feature-list li {
+  margin-bottom: 20px;
+}
+
+#list-item h3 {
+  margin-right: 10px;
+}
+
+iframe{
+  margin-top:20px;
+}
+
+#pricing{
+  font-size:40px;
+  margin:20px;
+}
+
+@media(max-width:539px){
+  #header{
+      height: 7rem;
+    }
+  #nav-bar{
+    display:none;
+  }
+  #hero{
+    margin-top:150px;
+    margin-bottom:90px;
+  }
+  iframe{
+    width:500;
+    height:285;
+  }
+}
+
