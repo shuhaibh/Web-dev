@@ -3,18 +3,19 @@
 ::after {
   padding: 0;
   margin: 0;
-box-sizing:border-box;
+  box-sizing: border-box;
 }
 
-HTML{
-  font-size: 62.5%; 
+html {
+  font-size: 62.5%;
 }
 
 body {
   font-family: 'Baskervville', serif;
-  color:black;
-  background-color: #FFF3E7
-;
+  color: black;
+  background-color: #FFF3E7;
+  margin: 0;
+  font-size: 1.6rem;
 }
 
 #header {
@@ -28,134 +29,150 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
-#header-img{
-  width:7rem;
-  position:relative;
+#header-img {
+  width: 7rem;
+  position: relative;
 }
-  
-#company-title{
-font-family:'Baskervville', serif;
-  font-size:30px;
-  color:black;
-  position:relative;
-  padding-left:10px;
+
+#company-title {
+  font-family: 'Baskervville', serif;
+  font-size: 3rem;
+  color: black;
+  position: relative;
+  padding-left: 10px;
 }
 
 #nav-bar {
-  margin-left: auto; 
+  margin-left: auto;
 }
 
-#nav-bar a{
-  text-decoration:none;
-  font-size:30px;
-  padding:13px;
-  color:black;
-  border-radius:5px;
-  transition: background-color 0.3s, color 0.3s;
-
-}
-
-#nav-bar a:hover{
-  background-color:#F07167;
-  color:black;
-}
-
-#hero{
-  margin-top:90px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-  justify-content:center;
-  height:200px;
-  font-family:'Brush Script MT';
-  font-size:60px;
-}
-
-#hero p{
-  margin:0 40px 15px 40px;
-  font-family:serif;
-  font-size:30px;
-}
-#email{
-  max-width:375px;
-  width:100%;
-  border: 1px solid #ccc;
+#nav-bar a {
+  text-decoration: none;
+  font-size: 2.4rem;
+  padding: 1.3rem;
+  color: black;
   border-radius: 5px;
-  padding:7px;
-  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-#submit{
-    max-width:175px;
-    width:100%;
-    padding:7px;
-    margin-top:10px;
-    background-color:#F07167;
-    font-size: 16px;
-    border-radius: 5px; 
-    cursor: pointer;
+#nav-bar a:hover {
+  background-color: #F07167;
+  color: black;
 }
 
-#submit:hover{
-    background-color:#EF3B2E;
-}
-
-#container{
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#hero {
+  margin-top: 7rem;
+  padding: 10rem 2rem;
   text-align: center;
 }
-#Feature-list{
-  list-style-type: none; 
+
+#hero p {
+  margin: 2rem 0;
+  font-size: 2rem;
+}
+
+#form {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+#email {
+  width: calc(100% - 20px);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+
+#submit {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: #F07167;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: #EF3B2E;
+}
+
+#container {
+  padding: 2rem;
+}
+
+#Feature-list {
+  list-style-type: none;
   padding: 0;
 }
 
 #list-item {
   display: flex;
-  flex-direction: row;
-  font-size: 25px;
-  align-items: center; 
-  justify-content: space-between;
-}
-
-#Feature-list li {
-  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
 #list-item h3 {
-  margin-right: 10px;
+  margin-bottom: 1rem;
 }
 
-iframe{
-  margin-top:20px;
+iframe {
+  width: 100%;
+  max-width: 100%;
 }
 
-#pricing{
-  font-size:40px;
-  margin:20px;
+#Pricing {
+  font-size: 3rem;
+  margin: 4rem 0;
 }
 
-@media(max-width:539px){
-  #header{
-      height: 7rem;
-    }
-  #nav-bar{
-    display:none;
+@media (max-width: 768px) {
+  #hero {
+    padding: 8rem 1rem;
   }
-  #hero{
-    margin-top:150px;
-    margin-bottom:90px;
+
+  #email {
+    width: calc(100% - 14px);
+    font-size: 1.4rem;
   }
-  iframe{
-    width:500;
-    height:285;
+
+  #submit {
+    padding: 0.8rem;
+    font-size: 1.4rem;
+  }
+
+  #container {
+    padding: 1rem;
   }
 }
+
+@media (max-width: 539px) {
+  #nav-bar {
+    display: none;
+  }
+
+  #hero {
+    margin-top: 10rem;
+  }
+
+  #company-title {
+    font-size: 2.5rem;
+  }
+
+  #hero p {
+    font-size: 1.8rem;
+  }
+
+  #list-item {
+    margin-bottom: 2rem;
+  }
+}
+
 
