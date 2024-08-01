@@ -1,0 +1,199 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Baskervville', serif;
+  color: black;
+  background-color: #FFF3E7;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7rem;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#navbar {
+  margin-left: auto;
+}
+
+#navbar a {
+  text-decoration: none;
+  font-size: 30px;
+  padding: 13px;
+  color: #FFE5D9;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#navbar a:hover {
+  background-color: #FFE0D2;
+  color: black;
+}
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #9D8189;
+  background-image: linear-gradient(62deg, #D8E2DC 0%, #FFE5D9 100%);
+}
+
+#welcome-section h1 {
+  font-size: 50px;
+}
+
+#welcome-section hr {
+  border: 1px solid black;
+  width: 60%;
+}
+
+#projects {
+  background-color: #0d1b2a;
+  padding: 20px;
+}
+
+#projects h1 {
+  font-size: 40px;
+  text-align: center;
+  margin: auto;
+  color: #FFE5D9;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.project-gallery a img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project-gallery h3 {
+  text-decoration: none;
+  color: #FFE5D9;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+#contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #9D8189;
+  background-image: linear-gradient(62deg, #D8E2DC 0%, #FFE5D9 100%);
+}
+
+#contact-section h1 {
+  font-size: 50px;
+}
+
+#contact-section hr {
+  border: 1px solid black;
+  width: 60%;
+}
+
+#contact-section img {
+}
+
+@media (max-width: 1200px) {
+  #navbar a {
+    font-size: 25px;
+    padding: 10px;
+  }
+
+  #welcome-section h1 {
+    font-size: 40px;
+  }
+
+  #projects h1 {
+    font-size: 35px;
+  }
+
+  .project-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .project-gallery a img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  #navbar a {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  #welcome-section h1 {
+    font-size: 35px;
+  }
+
+  #projects h1 {
+    font-size: 30px;
+  }
+
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .project-gallery a img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    height: 5rem;
+    padding: 0 1rem;
+  }
+
+  #navbar a {
+    font-size: 18px;
+    padding: 6px;
+  }
+
+  #welcome-section h1 {
+    font-size: 30px;
+  }
+
+  #projects h1 {
+    font-size: 25px;
+  }
+
+  .project-gallery a img {
+    height: 150px;
+  }
+}
